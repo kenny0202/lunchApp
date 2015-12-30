@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="starter">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -22,8 +22,9 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/controllers/controllers.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-controller="RestaurantCtrl">
 
     <ion-pane>
       <ion-header-bar class="bar-positive">
@@ -32,32 +33,32 @@
       <ion-content scroll="false">
         <div class="list card">
           <div class="item item-image">
-            <img ng-src="http://p.fod4.com/p/media/dd5164b1c6/tSTM3x1OQMuusG4nrbi3_mcdonalds-logo.jpg"> <!-- {{currentRestaurant.img}} -->
+            <img ng-src={{currentRestaurant.img}}> 
           </div>
           <div class="item">
             <div class="row">
               <div class="col col-50">Name:</div>
-              <div class="col">{{currentRestaurant.name}}</div> <!-- {{currentRestaurant.name}} -->
+              <div class="col">{{currentRestaurant.name}}</div> 
             </div>
             <div class="row">
               <div class="col col-50">Address:</div>
-              <div class="col"><b>910 Mainland Street</b></div> <!-- {{currentRestaurant.address}} -->
+              <div class="col"><b>{{currentRestaurant.address}}</b></div>
             </div>
             <div class="row">
               <div class="col col-50">Phone Number:</div>
-              <div class="col"><b>604-912-3951</b></div> <!-- {{currentRestaurant.phone}} -->
+              <div class="col"><b>{{currentRestaurant.phone}}</b></div>
             </div>
             <div class="row">
               <div class="col col-50">Average Price:</div>
-              <div class="col"><b>$15</b></div> <!-- {{currentRestaurant.budget}} -->
+              <div class="col"><b>{{currentRestaurant.budget}}</b></div> 
             </div>
             <div class="row">
               <div class="col col-50">Cuisine</div>
-              <div class="col"><b>American</b></div> <!-- {{currentRestaurant.cuisine}} -->
+              <div class="col"><b>{{currentRestaurant.cuisine}}</b></div> 
             </div>
             <div class="row">
               <div class="col col-50">Rating:</div>
-              <div class="col"><b>4/10</b></div> <!-- {{currentRestaurant.rating}} -->
+              <div class="col"><b>{{currentRestaurant.rating}}</b></div> 
             </div>
           </div>
           <div class="item item-divider">

@@ -5,7 +5,7 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         "budget": "$10",
         "phone": "604-512-0433",
         "address": "4049 Cherry Lane Charleston, SC 29406",
-        "img": "https://www.producthunt.com/r/0109266759e0f0/40894?app_id=1948",
+        "img": "http://www.jayminter.com/wp-content/uploads/2014/07/IMG_0766-300x219.jpg",
         "cuisine": "American",
         "rating": "5" 
       },
@@ -35,9 +35,18 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         "img": "http://www.hercampus.com/sites/default/files/2015/07/23/chipotle-giftcard.png",
         "cuisine": "American",
         "rating": "7" 
+      },
+      {
+        "name": "Blue Water Cafe",
+        "budget": "$30",
+        "phone": "604-321-5234",
+        "address": "3700 Depot Street Oxnard, CA 93035",
+        "img": "https://tomostyle.files.wordpress.com/2010/09/img_1515.jpg",
+        "cuisine": "Western",
+        "rating": "10" 
       }
     ];
-    
+
     //initialize the current restaurant
     $scope.currentRestaurant = angular.copy($scope.restaurants[0]);
 
