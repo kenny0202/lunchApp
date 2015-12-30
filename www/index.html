@@ -32,39 +32,39 @@
       <ion-content scroll="false">
         <div class="list card">
           <div class="item item-image">
-            <img ng-src="http://p.fod4.com/p/media/dd5164b1c6/tSTM3x1OQMuusG4nrbi3_mcdonalds-logo.jpg">
+            <img ng-src="http://p.fod4.com/p/media/dd5164b1c6/tSTM3x1OQMuusG4nrbi3_mcdonalds-logo.jpg"> <!-- {{currentRestaurant.img}} -->
           </div>
           <div class="item">
             <div class="row">
               <div class="col col-50">Name:</div>
-              <div class="col"><b>McDonald's</b></div> <!-- {{restaurant.name}} -->
+              <div class="col">{{currentRestaurant.name}}</div> <!-- {{currentRestaurant.name}} -->
             </div>
             <div class="row">
               <div class="col col-50">Address:</div>
-              <div class="col"><b>910 Mainland Street</b></div> <!-- {{restaurant.address}} -->
+              <div class="col"><b>910 Mainland Street</b></div> <!-- {{currentRestaurant.address}} -->
             </div>
             <div class="row">
               <div class="col col-50">Phone Number:</div>
-              <div class="col"><b>604-912-3951</b></div> <!-- {{restaurant.phone}} -->
+              <div class="col"><b>604-912-3951</b></div> <!-- {{currentRestaurant.phone}} -->
             </div>
             <div class="row">
               <div class="col col-50">Average Price:</div>
-              <div class="col"><b>$15</b></div> <!-- {{restaurant.budget}} -->
+              <div class="col"><b>$15</b></div> <!-- {{currentRestaurant.budget}} -->
             </div>
             <div class="row">
               <div class="col col-50">Cuisine</div>
-              <div class="col"><b>American</b></div> <!-- {{restaurant.cuisine}} -->
+              <div class="col"><b>American</b></div> <!-- {{currentRestaurant.cuisine}} -->
             </div>
             <div class="row">
               <div class="col col-50">Rating:</div>
-              <div class="col"><b>4/10</b></div> <!-- {{restaurant.rating}} -->
+              <div class="col"><b>4/10</b></div> <!-- {{currentRestaurant.rating}} -->
             </div>
           </div>
           <div class="item item-divider">
             <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item">
-                <i class="icon ion-close"></i>
-                Skip
+              <a class="tab-item" ng-click="sendFeedback(false)">
+                <i class="icon ion-load-a"></i>
+                Random
               </a>
             </div>
           </div>
