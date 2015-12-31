@@ -5,8 +5,8 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         "budget": "$10",
         "phone": "604-512-0433",
         "address": "4049 Cherry Lane Charleston, SC 29406",
-        "img": "http://www.jayminter.com/wp-content/uploads/2014/07/IMG_0766-300x219.jpg",
-        "cuisine": "American",
+        "img": "img/delicious.jpg",
+        "cuisine": "Vietnamese",
         "rating": "5" 
       },
       {
@@ -14,17 +14,17 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         "budget": "$12",
         "phone": "604-346-1235",
         "address": "265 School Street Sebastian, FL 32958",
-        "img": "http://www.adweek.com/files/imagecache/node-detail/news_article/bk.jpg",
-        "cuisine": "American",
+        "img": "img/jinya.jpg",
+        "cuisine": "Japanese",
         "rating": "10" 
       },
       {
-        "name": "Hapa Izakaya",
+        "name": "Italian Kitchen",
         "budget": "$15",
         "phone": "604-324-8709",
         "address": "6462 Marshall Street Youngstown, OH 44512",
-        "img": "http://p.fod4.com/p/media/dd5164b1c6/tSTM3x1OQMuusG4nrbi3_mcdonalds-logo.jpg",
-        "cuisine": "American",
+        "img": "img/italian.jpg",
+        "cuisine": "Italian",
         "rating": "9" 
       },
       {
@@ -32,8 +32,8 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         "budget": "$9",
         "phone": "604-902-4182",
         "address": "5464 Lincoln Avenue Fairfax, VA 22030",
-        "img": "http://www.hercampus.com/sites/default/files/2015/07/23/chipotle-giftcard.png",
-        "cuisine": "American",
+        "img": "img/chipotle.png",
+        "cuisine": "Mexican",
         "rating": "7" 
       },
       {
@@ -41,7 +41,7 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         "budget": "$30",
         "phone": "604-321-5234",
         "address": "3700 Depot Street Oxnard, CA 93035",
-        "img": "https://tomostyle.files.wordpress.com/2010/09/img_1515.jpg",
+        "img": "img/blue.jpg",
         "cuisine": "Western",
         "rating": "10" 
       }
@@ -65,7 +65,7 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
         //update current restaurant in scope
         $scope.currentRestaurant = angular.copy($scope.restaurants[randomRestaurantIndex]);
 
-      }, 250);
+      }, 500);
     }
 })
 

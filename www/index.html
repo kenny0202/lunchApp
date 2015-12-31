@@ -26,23 +26,27 @@
   </head>
   <body ng-controller="RestaurantCtrl">
 
-    <ion-pane>
-      <ion-header-bar class="bar-positive">
+    <ion-pane> 
+      <div class="bar bar-header bar-balanced">
         <h1 class="title">Lunch App</h1>
-      </ion-header-bar>
-      <ion-content scroll="false">
-        <div class="list card">
+      </div>
+      <br>
+      <ion-content scroll="true">
+        <div class="list card current-restaurant"
+        ng-class="{skipped: currentRestaurant.rated == false, 
+        favorited: currentRestaurant.rated == true}"
+        ng-show="currentRestaurant && !currentRestaurant.hide">
           <div class="item item-image">
             <img ng-src={{currentRestaurant.img}}> 
           </div>
           <div class="item">
             <div class="row">
               <div class="col col-50">Name:</div>
-              <div class="col">{{currentRestaurant.name}}</div> 
+              <div class="col"><b>{{currentRestaurant.name}}</b></div> 
             </div>
-            <div class="row">
+            <div class="row responsive-sm">
               <div class="col col-50">Address:</div>
-              <div class="col"><b>{{currentRestaurant.address}}</b></div>
+              <div class="col-10"><b>{{currentRestaurant.address}}</b></div>
             </div>
             <div class="row">
               <div class="col col-50">Phone Number:</div>
@@ -58,21 +62,15 @@
             </div>
             <div class="row">
               <div class="col col-50">Rating:</div>
-              <div class="col"><b>{{currentRestaurant.rating}}</b></div> 
+              <div class="col"><b>{{currentRestaurant.rating}}/10</b></div> 
             </div>
           </div>
-          <div class="item item-divider">
-            <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" ng-click="sendFeedback(false)">
-                <i class="icon ion-load-a"></i>
-                Random
-              </a>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="bar bar-footer bar-positive">
-          <div class="title">Developed by ISIS</div>
+          <a href="#" class="item">
+            <button class="button button-full button-positive" ng-click="sendFeedback(false)">
+              <i class="icon ion-load-a"></i>
+              &nbsp;Random
+            </button>
+          </a>
         </div>
       </ion-content>
     </ion-pane>

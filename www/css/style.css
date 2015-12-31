@@ -1,1 +1,41 @@
 /* Empty. Add your own CSS if you like */
+/* Discover page styles */
+
+.pane {
+	background-color: #E0E0E0;
+}
+.current-restaurant {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+
+	-webkit-transition: all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.25s;
+	transition: all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.25s;
+}
+.current-restaurant.matched.ng-hide {
+	-webkit-transform: translateX(1000px) rotate(50deg);
+	-ms-transform: translateX(1000px) rotate(50deg);
+	transform: translateX(1000px) rotate(50deg);
+	opacity: 0;
+}
+
+.current-restaurant.skipped.ng-hide {
+	-webkit-transform: translateX(-200px) rotate(-150deg);
+	-ms-transform: translateX(-200px) rotate(-150deg);
+	transform: translateX(-200px) rotate(-150deg);
+	opacity: 0;
+}
+
+.current-restaurant.ng-hide-add {
+	-webkit-transition: all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.5s;
+	transition: all cubic-bezier(0.420, 0.000, 1.000, 1.000) 0.5s;
+	display:block!important;
+}
+
+.current-restaurant.ng-hide-remove {
+	-webkit-transform: scale(0.7) translateX(0px) rotate(0deg);
+	-ms-transform: scale(0.7) translateX(0px) rotate(0deg);
+	transform: scale(0.7) translateX(0px) rotate(0deg);
+	opacity: 0;
+}
