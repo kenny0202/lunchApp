@@ -1,5 +1,6 @@
-app.controller('RestaurantCtrl', function($scope, $timeout) {
-	$scope.restaurants = [
+app.controller('RestaurantCtrl', function($scope, $timeout, $http) {
+
+	$scope.restaurants = [ //this will eventually become the empty array where GET request will store the restaurants into.
       {
         "name": "Delicious Pho",
         "budget": "$10",
@@ -67,5 +68,36 @@ app.controller('RestaurantCtrl', function($scope, $timeout) {
 
       }, 500);
     }
+
+    /* Http Get Restaurants from API 
+    function getRandomRestaurant() {
+      //get restaurants from api then store into the array restaurants
+      $http.get("http://107.170.255.42:3000/api/v1/restaurant").then(function(response) {
+        $scope.restaurants = response.data;
+      });
+
+      //initialize the current restaurant
+      $scope.currentRestaurant = angular.copy($scope.restaurants[0]);
+
+       //fired when you random generate restaurant
+      $scope.sendFeedback = function(bool) {
+
+        //set variable for current animation sequence
+        $scope.currentRestaurant.rated = bool;
+        $scope.currentRestaurant.hide = true;
+
+        //$timeout to allow animation to complete before changing to the next product
+        $timeout(function() {
+          //get index of random restaurant 
+          var randomRestaurantIndex = Math.round(Math.random() * ($scope.restaurants.length - 1));
+
+          //update current restaurant in scope
+          $scope.currentRestaurant = angular.copy($scope.restaurants[randomRestaurantIndex]);
+
+          }, 500);
+        } 
+      }
+    }
+    */
 })
 
