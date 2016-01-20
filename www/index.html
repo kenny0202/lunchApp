@@ -30,8 +30,8 @@
       <div class="bar bar-header bar-balanced">
         <h1 class="title">Lunch App</h1>
       </div>
-      <br>
-      <ion-content scroll="true">
+     
+      <ion-content scroll="true" class="has-header">
         <div class="list card current-restaurant"
         ng-class="{skipped: currentRestaurant.rated == false, 
         favorited: currentRestaurant.rated == true}"
@@ -73,6 +73,7 @@
           </a>
         </div>
       </ion-content>
+ 
     </ion-pane>
   </body>
 </html>
